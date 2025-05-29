@@ -12,6 +12,10 @@
 .swiftpm/
 migrate_working_dir/
 
+#Project-specific ignores
+lib/Default.txt
+
+
 # IntelliJ related
 *.iml
 *.ipr
