@@ -1,0 +1,18 @@
+import '../model/user_model.dart';
+import '../model/users_response.dart';
+import '../services/service_api.dart';
+
+class UserController {
+  final ServiceApi _api;
+
+  UserController(this._api);
+
+  Future<List<User>> getUsers() async {
+    try {
+      final response = await _api.fetchUsers(); // ✅ Retrofit instance method
+      return response.users;
+    } catch (e) {
+      rethrow; // Forward error to UI
+    }
+  }
+}
