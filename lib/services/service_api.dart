@@ -3,7 +3,7 @@
 // import 'dart:convert';
 import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
-import '../model/users_response.dart';  
+import '../model/users_response.dart';
 // import '../model/users_response.dart';
 
 part 'service_api.g.dart';
@@ -15,19 +15,3 @@ abstract class ServiceApi {
   @GET('/users')
   Future<UsersResponse> fetchUsers();
 }
-
-//the old code 
-
-// class ServiceApi {
-//   static Future<List<User>> fetchUsers() async {
-//     final response = await http.get(Uri.parse('https://dummyjson.com/users'));
-
-//     if (response.statusCode == 200) {
-//       final data = json.decode(response.body);
-//       final List users = data['users'];
-//       return [for(var u in users) User.fromJson(u)];
-//     } else {
-//       throw Exception('Failed to load users');
-//     }
-//   }
-// }

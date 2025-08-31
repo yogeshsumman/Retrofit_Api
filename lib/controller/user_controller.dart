@@ -14,6 +14,7 @@ class UserController {
       final response = await _api.fetchUsers();
       return response.users;
     } catch (e) {
+      print('Error fetching users: $e');
       rethrow;
     }
   }

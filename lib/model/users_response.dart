@@ -4,7 +4,7 @@ import 'user_model.dart';
 
 part 'users_response.g.dart';
 
-@JsonSerializable() // used for converting the data t
+@JsonSerializable() // used for converting the data
 class UsersResponse {
   final List<User> users;
 
